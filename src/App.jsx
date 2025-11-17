@@ -25,7 +25,7 @@ function App() {
 }
   useEffect(() => {
     if (!localStorage.getItem("todos")) {
-      persistTodos();
+      persistTodos([]);
     } else {
       const localTodos = localStorage.getItem("todos");
       const storedTodos = JSON.parse(localTodos).todos;
